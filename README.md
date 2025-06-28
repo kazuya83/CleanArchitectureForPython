@@ -1,32 +1,16 @@
-# CleanArchitectureForPython
+# CleanArchitecture
 
-## データベース中心になってしまう問題
-- 多層アーキテクチャを実装する際に最初インデータベースの構造を決め、その後にビジネスロジックを実装してしまう
-- ORMの利用により、ビジネスロジックに対して永続化に関する要素を持ち込まないようにするのが困難になってしまう
-```mermaid
-サービス-->エンティティ
+## HexagonalArchitecture
+[ヘキサゴナルアーキテクチャについてJavaで説明しているもの](https://github.com/thombergs/buckpal)をPythonで実装しなおしてみた
+<img src="https://raw.githubusercontent.com/thombergs/buckpal/master/img/cover-packt-450.png" />
+
+今回私が実装したディレクトリ構成
+``` 
+CleanArchitectureForPython/
+  ├── HexagonalArchitecture/
+  │   └── buckpal
+  │       ├── Adpter
+  │       ├── Application
+  │       └── Common
+  └──  README.md
 ```
-
-
-## usecase定義
-### 処理の手順
-1. 入力値を受け取る
-2. ビジネスルールに関する妥当性確認を行う　(ユースケースを汚す可能性がある)
-3. ドメインモデルの状態を変える
-4. 処理結果を返す
-
-## 濃いドメインモデル vs 薄いドメインモデル
-- 濃いドメインモデル
-エンティティにドメインロジックを実装
-
-- 薄いドメインモデル
-ユースケースにドメインロジックを実装
-
-## webアダプタの責務
-1. 送られてきたHTTPリクエストをプログラムで利用可能なオブジェクトに変換する
-2. 認証/認可の確認を行う
-3. 入力値の妥当性確認を行う
-4. 入力値をユースケースの入力モデルに変換する
-5. ユースケースを呼び出す
-6. ユースケースの処理結果をHTTPレスポンスに変換する
-7. HTTPレスポンスを返す
