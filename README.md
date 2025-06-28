@@ -11,19 +11,19 @@
 ``` 
 CleanArchitectureForPython/
   ├── HexagonalArchitecture/
-  │   └── buckpal
-  │       ├── Adpter
-  │       │   ├── In
-  │       │   │   └── Web
-  │       │   └── Out
-  │       │   │   └── Persistence
-  │       ├── Application
-  │       │   ├── Domain
-  │       │   │   ├── Model
-  │       │   │   └── Service
-  │       │   └── Port
-  │       │   │   ├── In
-  │       │   │   └── Out
-  │       └── Common
-  └──  README.md
+      └── buckpal
+          ├── Adpter
+          │   ├── In
+          │   │   └── Web
+          │   └── Out
+          │   │   └── Persistence
+          ├── Application
+          │   ├── Domain
+          │   │   ├── Model
+          │   │   └── Service
+          │   └── Port
+          │   │   ├── In
+          │   │   └── Out
+          └── Common
+  
 ```
