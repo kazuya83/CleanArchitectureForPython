@@ -10,7 +10,7 @@
 ### 今回私が実装したディレクトリ構成
 ``` 
 CleanArchitectureForPython/
-  ├── HexagonalArchitecture/
+  └── HexagonalArchitecture/
       └── buckpal
           ├── Adpter
           │   ├── In
